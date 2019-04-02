@@ -77,7 +77,7 @@ And so forth.
 
 ### Deliverables
 
-- An app running on gh-pages, containing at least:
+- An app containing at least:
   - `index.html`
   - One or more CSS files (e.g. `css/main.css`)
   - One or more JavaScript files (e.g. `js/main.js`)
