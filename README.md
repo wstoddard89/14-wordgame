@@ -11,8 +11,7 @@ Basically, it works like this:
 - The player has a fixed number of turns in which to guess all of the letters in the word
 - The app should indicate when the player has won or lost
 
-Please feel free to get fancy with it! 
-
+Please feel free to get fancy with it!
 
 ## Objectives
 
@@ -22,30 +21,24 @@ After completing this assignment, you should…
 - Be able to properly sequence JavaScript statements
 - Be able to change the DOM based on application state (win/loss, valid/invalid guess)
 
+### to get started (install the packages you need (parcel for instance)
+
+```bash
+npm install
+```
+
+### to start the server (localhost:1234 or whatever it is...)
+
+```bash
+npm run start
+```
+
 ## Details
 
 ### Instructions
 
 - Create your project
-- Create a file called `js/common-words.js` and paste this into it:
-
-```javascript
-// Here are the 100 most popular words in English, as totally
-// stolen from here: https://gist.github.com/gravitymonkey/2406023
-var commonWords = [
-  "the","of","and","a","to","in","is","you","that","it","he",
-  "was","for","on","are","as","with","his","they","I","at","be",
-  "this","have","from","or","one","had","by","word","but","not",
-  "what","all","were","we","when","your","can","said","there",
-  "use","an","each","which","she","do","how","their","if","will",
-  "up","other","about","out","many","then","them","these","so",
-  "some","her","would","make","like","him","into","time","has",
-  "look","two","more","write","go","see","number","no","way",
-  "could","people","my","than","first","water","been","call",
-  "who","oil","its","now","find","long","down","day","did","get",
-  "come","made","may","part"
-];
-```
+- import the common words into whatever file you need to use it (IE game.js or index.js)
 
 ### Example
 
@@ -79,14 +72,14 @@ And so forth.
 
 - An app containing at least:
   - `index.html`
-  - One or more CSS files (e.g. `css/main.css`)
-  - One or more JavaScript files (e.g. `js/main.js`)
+  - css
+  - One or more JavaScript files
 
 ## Normal Mode
 
 The game should:
 
-- Choose a random word *of 3 letters or more* from the `commonWords` array
+- Choose a random word _of 3 letters or more_ from the `commonWords` array
 - Allow the user to guess one letter at a time
 - When the user runs out of turns, show a losing screen
 - When the user guesses all of the letters in the word, show a winning screen
