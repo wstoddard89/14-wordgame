@@ -1,0 +1,23 @@
+{
+  "name": "14-wordgame",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/punchcode-fullstack/14-wordgame.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/punchcode-fullstack/14-wordgame/issues"
+  },
+  "homepage": "https://github.com/punchcode-fullstack/14-wordgame#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
