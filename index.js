@@ -1,1 +1,2 @@
-console.log('here ya go!')
+import './main.css'
+import './game'
