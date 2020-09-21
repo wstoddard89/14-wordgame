@@ -33,6 +33,12 @@ npm install
 npm run start
 ```
 
+### to stop the node server
+
+```bash
+control c
+```
+
 ## Details
 
 ### Instructions
