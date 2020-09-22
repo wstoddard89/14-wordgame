@@ -3,3 +3,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+#currentWord {
+  display: flex;
+}
+
+.guessBox {
+  display: flex;
+  height: 30px;
+  width: 30px;
+  border-bottom: solid 1px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+}
