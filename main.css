@@ -4,15 +4,59 @@
   box-sizing: border-box;
 }
 
+body, html {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  font-family: Rockwell;
+  color: white;
+}
+
+#title {
+  font-size: 80px;
+  font-family: Rockwell;
+  color: white;
+}
+
 #currentWord {
   display: flex;
+  margin-top: 70px;
+  color: white;
 }
 
 .guessBox {
   display: flex;
-  height: 30px;
-  width: 30px;
-  border-bottom: solid 1px;
-  margin-right: 5px;
-  margin-bottom: 20px;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-bottom: solid 3px white;
+  margin-right: 15px;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+#letterButtons {
+  display: flex;
+}
+
+#letterButtons button {
+  font-size: 18px;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+#letterButtons button:hover {
+  border: solid 2px blue;
+}
+
+#lives {
+  color: white;
+  margin-top: 20px;
 }
