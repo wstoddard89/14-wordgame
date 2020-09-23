@@ -3,7 +3,6 @@ console.log(commonWords)
 
 // GET RANDOM WORD
 const randomWord = commonWords[Math.floor(Math.random() * commonWords.length)]
-console.log(randomWord)
 
 // GET WORDS THAT ARE 3 CHARACTERS OR MORE
 let allowedWords = []
@@ -17,28 +16,33 @@ console.log(allowedWords)
 // GET RANDOM WORD OUT OF THE ALLOWED WORDS
 const randomAllowedWord =
   allowedWords[Math.floor(Math.random() * allowedWords.length)]
-console.log(randomAllowedWord)
 
-//SEPARATE THE RANDOM ALLOWED WORDS INTO SEPARATE CHARACTERS
+// SEPARATE THE RANDOM ALLOWED WORDS INTO SEPARATE CHARACTERS
 const separatedWord = randomAllowedWord.split("")
 console.log(separatedWord)
-
-// let wordHtml = separatedWord.map(function (item) {
-//   const currentWord = separatedWord
-//   document.querySelector("#currentWord").innerHTML = currentWord.join('')
-
-//})
 
 let hiddenWords = []
 for (let i = 0; i < randomAllowedWord.length; i++) {
   hiddenWords.push(`<div class='guessBox'></div>`)
 }
 document.getElementById("currentWord").innerHTML = hiddenWords.join("")
-let lettersUsed = ("")
+let lettersUsed = ""
 let lives = 8
 document.getElementById("lives").innerHTML = "Attempts Remaining: " + lives
-document.getElementById("letterButtons").addEventListener("click", function (e) {
-    console.log(e.target.innerText)
+
+// CLICK EVENT FUNCTION
+const guesses = []
+document
+  .getElementById("letterButtons")
+  .addEventListener("click", function (e) {
+    const userGuess = e.target
+    if (guesses.includes(userGuess)) {
+      // Limits only one guess per letter
+      return
+    } else {
+      guesses.push(userGuess)
+    }
+
     if (separatedWord.includes(e.target.innerText)) {
       for (let i = 0; i < separatedWord.length; i++) {
         if (separatedWord[i] === e.target.innerText) {
@@ -53,7 +57,7 @@ document.getElementById("letterButtons").addEventListener("click", function (e) 
       }
     } else {
       lettersUsed += e.target.innerText
-      document.getElementById("lettersUsed").innerHTML = 
+      document.getElementById("lettersUsed").innerHTML =
         "Letters Used: " + lettersUsed
       document.getElementById("lives").innerHTML =
         "Attempts Remaining: " + (lives -= 1)
