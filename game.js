@@ -1,5 +1,5 @@
 import { commonWords } from "./constants.js"
-console.log(commonWords)
+
 
 // GET RANDOM WORD
 const randomWord = commonWords[Math.floor(Math.random() * commonWords.length)]
@@ -32,9 +32,7 @@ document.getElementById("lives").innerHTML = "Attempts Remaining: " + lives
 
 // CLICK EVENT FUNCTION
 const guesses = []
-document
-  .getElementById("letterButtons")
-  .addEventListener("click", function (e) {
+document.getElementById("letterButtons").addEventListener("click", function (e) {
     const userGuess = e.target
     if (guesses.includes(userGuess)) {
       // Limits only one guess per letter
